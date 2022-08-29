@@ -4,15 +4,16 @@
   font-family: "Poppins", sans-serif;
   background-color: $primary;
 
-  display: grid;
-  grid-template-columns:
-    200px auto
-    643px;
-  grid-template-rows: auto;
-  grid-template-areas:
-    "SB MH PM"
-    "SB MH PM";
-  height: 100vh;
+  display: flex;
+  // display: grid;
+  // grid-template-columns:
+  //   200px auto
+  //   643px;
+  // grid-template-rows: auto;
+  // grid-template-areas:
+  //   "SB MH PM"
+  //   "SB MH PM";
+  // height: 100vh;
 }
 
 // .container {
