@@ -34,6 +34,7 @@ export const Card = () => {
     <div className="item-list">
       {itemsList?.map((item) => (
         <Item
+          id={item.id}
           key={item.id}
           name={item.name}
           description={item.description}
