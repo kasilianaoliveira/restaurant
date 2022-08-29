@@ -1,0 +1,29 @@
+@import "../../../assets/variables.scss";
+
+li {
+  display: flex;
+
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+
+  height: 100px;
+  padding: 20px 40px;
+  cursor: pointer;
+  transition: background 0.2s;
+  border-radius: 0.5rem;
+}
+.selected {
+  background-color: $tertiary;
+  border-radius: 0.5rem;
+
+  .color-select {
+    filter: brightness(4%);
+    -webkit-filter: brightness(4%);
+  }
+
+  p {
+    color: $title;
+  }
+}
