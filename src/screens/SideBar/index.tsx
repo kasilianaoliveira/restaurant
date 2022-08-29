@@ -4,15 +4,9 @@ import Deserts from "../../assets/icons/ice-cream.svg";
 import Drinks from "../../assets/icons/smothie.svg";
 import Burguer from "../../assets/icons/food.svg";
 import "./style.scss";
-import { ButtonHTMLAttributes, useContext, useState } from "react";
+import { useContext } from "react";
 import { List } from "../components/List/Index";
 import { CategoriaContext } from "../../context/CategoriaContext";
-
-// interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
-//   label: string;
-//   iconName: string;
-//   selected: boolean;
-// }
 
 let categoriesList = [
   {
