@@ -1,0 +1,57 @@
+@import "../../../assets/variables.scss";
+
+.card-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  gap: 8px;
+
+  list-style: none;
+  position: relative;
+
+  border-radius: 8px;
+
+  width: 13.4969rem;
+  height: 18.125rem;
+  margin: 1.25rem;
+  padding: 1.25rem;
+
+  background-color: $secondary;
+
+  .tag {
+    position: absolute;
+    background: $quaternary;
+
+    border-radius: 8px;
+    color: $secondary;
+
+    top: 0.9375rem;
+    right: 0.9375rem;
+
+    font-weight: 500;
+    font-size: 0.75rem;
+
+    padding: 0.1875rem 0.5rem;
+  }
+
+  .img {
+    display: block;
+    margin: auto;
+    width: 127px;
+  }
+  .name {
+    font-weight: 600;
+    font-size: 1.125rem;
+  }
+
+  .description {
+    font-weight: 300;
+    font-size: 0.75rem;
+    color: $subtitle;
+  }
+  .price {
+    font-weight: 600;
+    color: $tertiary;
+  }
+}
