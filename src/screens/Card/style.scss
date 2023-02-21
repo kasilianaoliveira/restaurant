@@ -1,5 +1,12 @@
 .item-list {
   // grid-area: MH;
   display: flex;
+  flex-wrap: wrap;
   width: 100%;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    align-items: center;
+    padding: 0 20px;
+  }
 }

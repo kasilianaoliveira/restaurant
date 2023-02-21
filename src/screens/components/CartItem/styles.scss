@@ -1,0 +1,41 @@
+@import "../../../assets/variables.scss";
+
+.cart-item {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  border-bottom: 1px solid $light-gray;
+
+  .img-container {
+    display: flex;
+    align-items: center;
+    border-radius: 8px;
+    background: $light-yellow;
+
+    .item-img {
+      width: 6.25rem;
+    }
+  }
+  .item-name {
+    font-weight: 600;
+    font-size: 1.125rem;
+  }
+
+  .item-observation {
+    font-weight: 500;
+    font-size: 0.75rem;
+    color: $light-gray;
+  }
+
+  .content-cart {
+    flex-grow: 1;
+    padding: 0 20px;
+  }
+
+  .item-price {
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 27px;
+    color: $tertiary;
+  }
+}

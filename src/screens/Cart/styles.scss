@@ -1,0 +1,13 @@
+@import "../../assets/variables.scss";
+
+.cart {
+  background: $secondary;
+  min-width: 643px;
+  width: 643px;
+  padding: 50px;
+
+  .card-title {
+    font-weight: 600;
+    font-size: 1.5rem;
+  }
+}

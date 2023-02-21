@@ -10,9 +10,10 @@ interface PropsApi {
   description: string;
   price: number;
   offer: boolean;
+  quantity: number;
 }
 
-interface ApiServiceItems extends Array<PropsApi> {}
+interface ApiServiceItems extends Array<PropsApi> { }
 
 export const Card = () => {
   const { selectedItem } = useContext(CategoriaContext);
@@ -31,7 +32,7 @@ export const Card = () => {
   }, [selectedItem]);
 
   return !isLoading ? (
-    <div className="item-list">
+    <aside className="item-list">
       {itemsList?.map((item) => (
         <Item
           id={item.id}
@@ -40,9 +41,11 @@ export const Card = () => {
           description={item.description}
           price={item.price}
           offer={item.offer}
+          image={`/assets/images/${item.id}.png`}
+          quantity={0}
         />
       ))}
-    </div>
+    </aside>
   ) : (
     <Loading />
   );

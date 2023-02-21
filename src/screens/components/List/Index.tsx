@@ -7,6 +7,7 @@ interface Props {
   label: string;
   onClick: (id: string) => void;
 }
+
 export const List = ({ id, isActive, icon, label, onClick }: Props) => {
   return (
     <li

@@ -1,5 +1,6 @@
 import { CategoriaContextProvider } from "../../context/CategoriaContext";
 import { Card } from "../Card";
+import { Cart } from "../Cart";
 
 import { SideBar } from "../SideBar";
 import "./style.scss";
@@ -10,6 +11,7 @@ export const Home = () => {
       <CategoriaContextProvider>
         <SideBar />
         <Card />
+        <Cart />
       </CategoriaContextProvider>
     </div>
   );

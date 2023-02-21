@@ -1,7 +1,8 @@
 @import "../../assets/variables.scss";
 
 .category-list {
-  grid-area: SB;
+  // grid-area: SB;
+  min-width: 130px;
   width: 8.125rem;
   min-width: 8.125rem;
   height: 100vh;
@@ -32,6 +33,21 @@
 
     p {
       color: $title;
+    }
+  }
+
+  @media (max-width: 768px) {
+    // flex-direction: column;
+    width: 100%;
+    height: fit-content;
+
+    ul {
+      display: flex;
+      margin: 1.25rem;
+      overflow: scroll;
+      li {
+        min-width: 78px;
+      }
     }
   }
 }

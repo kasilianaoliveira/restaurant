@@ -3,6 +3,7 @@ import Combo from "../../assets/icons/french-fries.svg";
 import Deserts from "../../assets/icons/ice-cream.svg";
 import Drinks from "../../assets/icons/smothie.svg";
 import Burguer from "../../assets/icons/food.svg";
+
 import "./style.scss";
 import { useContext } from "react";
 import { List } from "../components/List/Index";
