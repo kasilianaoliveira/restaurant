@@ -5,9 +5,25 @@
   min-width: 643px;
   width: 643px;
   padding: 50px;
+  position: relative;
 
   .card-title {
     font-weight: 600;
     font-size: 1.5rem;
   }
+  
+  .total-price{
+    position: absolute;
+    right: 60px;
+    margin-top: 25px;
+    font-weight: bold;
+    font-size: 18px;
+
+    span {
+      color: $tertiary;
+      margin-left: 1.25rem;
+      
+    }
+  }
+
 }

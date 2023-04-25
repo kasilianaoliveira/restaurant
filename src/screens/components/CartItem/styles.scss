@@ -5,6 +5,22 @@
   align-items: center;
   padding: 10px;
   border-bottom: 1px solid $light-gray;
+  margin-top: 1.875rem;
+
+  .qtd {
+    display: flex;
+    font-weight: bold;
+    gap: 5px;
+    margin-right: 1.25rem;
+
+    p {
+      color: $tertiary;
+
+    }
+    span {
+      cursor: pointer;
+    }
+  }
 
   .img-container {
     display: flex;
@@ -16,6 +32,7 @@
       width: 6.25rem;
     }
   }
+
   .item-name {
     font-weight: 600;
     font-size: 1.125rem;

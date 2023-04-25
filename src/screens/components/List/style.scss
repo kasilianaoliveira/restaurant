@@ -13,6 +13,11 @@ li {
   cursor: pointer;
   transition: background 0.2s;
   border-radius: 0.5rem;
+
+
+  &:hover {
+    background-color: $tertiary;
+  }
 }
 .selected {
   background-color: $tertiary;
