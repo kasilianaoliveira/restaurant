@@ -17,7 +17,7 @@ export const Cart = () => {
     <div className="cart">
       <h2 className="cart-title">Seu pedido</h2>
       {cartList.map((cart) => (
-         cart.name !== '' && <CartItem
+        cart.name !== '' && <CartItem
           key={Math.random()}
           id={cart.id}
           name={cart.name}
@@ -29,7 +29,13 @@ export const Cart = () => {
         />
       ))}
 
-    {total > 0 && <p className="total-price">Total <span>{filterPrice}</span></p>}
+      {total > 0 &&
+        <>
+          <p className="total-price">Total <span>{filterPrice}</span></p>
+          <button className="final-pedido">Finalizar Pedido</button>
+        </>
+      }
+
     </div>
   )
 }

@@ -1,9 +1,12 @@
 @import "../../assets/variables.scss";
 
 .cart {
+  display: flex;
+  align-items: start;
+  min-width: 490px;
+  flex-direction: column;
   background: $secondary;
-  min-width: 643px;
-  width: 643px;
+  width: auto;
   padding: 50px;
   position: relative;
 
@@ -11,18 +14,36 @@
     font-weight: 600;
     font-size: 1.5rem;
   }
-  
-  .total-price{
-    position: absolute;
-    right: 60px;
+
+  .total-price {
+
     margin-top: 25px;
+    margin-bottom: calc(58px + 58px);
+    align-self: flex-end;
     font-weight: bold;
     font-size: 18px;
 
     span {
       color: $tertiary;
       margin-left: 1.25rem;
-      
+
+    }
+  }
+
+  .final-pedido {
+    position: absolute;
+    bottom: 58px;
+    background-color: $quaternary;
+    color: $secondary;
+    width: 390px;
+    height: 51px;
+    border-radius: 8px;
+    border: 0;
+    font-weight: bold;
+    transition: all 0.4s;
+
+    &:hover {
+      filter: brightness(85%);
     }
   }
 
