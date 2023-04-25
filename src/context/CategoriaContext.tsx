@@ -39,10 +39,22 @@ export const CategoriaContextProvider: FC<CategoryProviderProps> = ({
     setCartList((prevState) => [...prevState, { ...product, quantity: 1 }]);
   }
 
+  const handleRemoveFromCart = (product: ItemProps) => {
+    const productIndex = cartList.findIndex((cart) => cart.id === product.id);
+    const updatedCartList = [...cartList];
+    if (updatedCartList[productIndex].quantity === 1) {
+      updatedCartList.splice(productIndex, 1);
+    } else {
+      updatedCartList[productIndex].quantity -= 1;
+    }
+    setCartList(updatedCartList);
+  }
+
   return (
     <CategoriaContext.Provider
       value={{
         handleAddToCart,
+        handleRemoveFromCart,
         selectedItem,
         setSelectedItem,
         cartList,
