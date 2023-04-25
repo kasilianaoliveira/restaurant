@@ -13,7 +13,6 @@ export const Cart = () => {
     currency: "BRL",
   });
 
-  console.log(total)
   return (
     <div className="cart">
       <h2 className="cart-title">Seu pedido</h2>

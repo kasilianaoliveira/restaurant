@@ -4,17 +4,20 @@ import { ItemProps } from "../../../types/Item";
 import "./styles.scss";
 
 export const CartItem = (item: ItemProps) => {
-  // const { quantity } = useContext(CategoriaContext);
+  const { handleAddToCart,handleRemoveFromCart } = useContext(CategoriaContext);
 
   const filterPrice = item.price.toLocaleString("pt-br", {
     style: "currency",
     currency: "BRL",
   });
 
+
   return (
     <div className="cart-item">
       <div className="qtd">
+        <span onClick={() => handleRemoveFromCart(item)}>-</span>
         <p>{item.quantity}</p>
+        <span onClick={() => handleAddToCart(item)}>+</span>
       </div>
       <div className="img-container">
         <img src={item.image} alt="" className="item-img" />
@@ -24,8 +27,8 @@ export const CartItem = (item: ItemProps) => {
         <a href="http://" className="item-observation">Adicionar observação</a>
       </div>
       <p className="item-price">{filterPrice}</p>
-
     </div>
+    
   )
 }
 
