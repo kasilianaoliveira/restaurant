@@ -6,12 +6,19 @@ import "./styles.scss";
 export const Cart = () => {
   const { cartList } = useContext(CategoriaContext);
 
+  const total = cartList.reduce((acc, curr) => acc + (curr.price * curr.quantity), 0);
 
+  const filterPrice = total.toLocaleString("pt-br", {
+    style: "currency",
+    currency: "BRL",
+  });
+
+  console.log(total)
   return (
     <div className="cart">
       <h2 className="cart-title">Seu pedido</h2>
       {cartList.map((cart) => (
-        cart.name !== '' && <CartItem
+         cart.name !== '' && <CartItem
           key={Math.random()}
           id={cart.id}
           name={cart.name}
@@ -21,8 +28,9 @@ export const Cart = () => {
           image={cart.image}
           quantity={cart.quantity}
         />
-
       ))}
+
+    {total > 0 && <p className="total-price">Total <span>{filterPrice}</span></p>}
     </div>
   )
 }
