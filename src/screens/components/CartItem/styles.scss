@@ -7,17 +7,27 @@
   border-bottom: 1px solid $light-gray;
   margin-top: 1.875rem;
 
-  .qtd {
+  .item-quantity {
     display: flex;
+    align-items: center;
     font-weight: bold;
     gap: 5px;
-    margin-right: 1.25rem;
+    padding-right: 1.25rem;
 
     p {
+      text-align: center;
+      font-size: 1.125rem;
+      font-weight: 500;
+      width: 28px;
       color: $tertiary;
+  
 
     }
-    span {
+    button {
+      font-weight: 600;
+      font-size: 1.125rem;
+      background: none;
+      border: 0;
       cursor: pointer;
     }
   }
@@ -54,5 +64,27 @@
     font-size: 18px;
     line-height: 27px;
     color: $tertiary;
+  }
+
+  @media (max-width: 768px) {
+    flex-wrap: wrap;
+    .img-container {
+      order: 1;
+    }
+    .content-cart{
+      order: 2;
+    }
+    .item-quantity{
+      order: 3;
+      width: 6.25rem;
+      padding: 0;
+      margin-top: 20px;
+      justify-content: center;
+    }
+    .item-price{
+      order: 4;
+      margin-top: 20px;
+      padding: 0 20px;
+    }
   }
 }

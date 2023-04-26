@@ -8,12 +8,22 @@
 
 a {
   text-decoration: none;
+  color: inherit;
 }
 
 button {
   cursor: pointer;
+
+  &:focus{
+    outline: 0;
+  }
 }
 
 li {
   cursor: pointer;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  
 }

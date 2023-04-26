@@ -3,6 +3,7 @@ import { CategoriaContext } from "../../../context/CategoriaContext";
 import { ItemProps } from "../../../types/Item";
 import "./styles.scss";
 
+
 export const CartItem = (item: ItemProps) => {
   const { handleAddToCart,handleRemoveFromCart } = useContext(CategoriaContext);
 
@@ -14,10 +15,10 @@ export const CartItem = (item: ItemProps) => {
 
   return (
     <div className="cart-item">
-      <div className="qtd">
-        <span onClick={() => handleRemoveFromCart(item)}>-</span>
+      <div className="item-quantity">
+        <button onClick={() => handleRemoveFromCart(item)}>-</button>
         <p>{item.quantity}</p>
-        <span onClick={() => handleAddToCart(item)}>+</span>
+        <button onClick={() => handleAddToCart(item)}>+</button>
       </div>
       <div className="img-container">
         <img src={item.image} alt="" className="item-img" />

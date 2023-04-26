@@ -2,21 +2,30 @@
 
 .cart {
   display: flex;
-  align-items: start;
+  // align-items: start;
   min-width: 490px;
   flex-direction: column;
   background: $secondary;
-  width: auto;
-  padding: 50px;
+  width: 70%;
+  padding: 50px 20px;
   position: relative;
 
-  .card-title {
+  .cart-go-back{
+    font-weight: 600;
+    font-size: 18px;
+    margin-bottom: 50px;
+    
+    display: none;
+  }
+
+  .cart-title {
     font-weight: 600;
     font-size: 1.5rem;
+    margin-bottom: 20px;
   }
 
   .total-price {
-
+    padding-right: 10px;
     margin-top: 25px;
     margin-bottom: calc(58px + 58px);
     align-self: flex-end;
@@ -33,6 +42,7 @@
   .final-pedido {
     position: absolute;
     bottom: 58px;
+    align-self: center;
     background-color: $quaternary;
     color: $secondary;
     width: 390px;
@@ -45,6 +55,24 @@
     &:hover {
       filter: brightness(85%);
     }
+  }
+
+
+  @media (max-width: 768px) {
+    min-width: unset;
+    width: 100%;
+    padding: 50px 20px 20px;
+
+    .final-pedido {
+      bottom: 0px;
+      font-size: 16px;
+    }
+
+    .cart-go-back{
+      display: block;
+    }
+  
+
   }
 
 }

@@ -42,11 +42,11 @@ export const CategoriaContextProvider: FC<CategoryProviderProps> = ({
   const handleRemoveFromCart = (product: ItemProps) => {
     const productIndex = cartList.findIndex((cart) => cart.id === product.id);
     const updatedCartList = [...cartList];
-    if (updatedCartList[productIndex].quantity === 1) {
-      updatedCartList.splice(productIndex, 1);
-    } else {
-      updatedCartList[productIndex].quantity -= 1;
-    }
+    
+    updatedCartList[productIndex].quantity === 1
+      ? updatedCartList.splice(productIndex, 1)
+      : updatedCartList[productIndex].quantity -= 1;
+
     setCartList(updatedCartList);
   }
 
